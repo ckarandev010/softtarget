@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "softtarget"
+version = "0.1.0"
+description = "A deliberately vulnerable LLM app for learning AI security, running on your own local model."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Karandev Chauhan"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+softtarget = "softtarget.__main__:main"
+
+[tool.setuptools]
+packages = ["softtarget"]
+
+[tool.setuptools.package-data]
+softtarget = ["static/*"]
